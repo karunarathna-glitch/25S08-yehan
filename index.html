@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>森田のスネークゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>森田のスネークゲーム</h1>
+        
+        <div id="ui-panel">
+            <p>残りライフ: <span id="life-count">10</span></p>
+            <p>現在のスコア: <span id="score">0</span></p>
+            
+            <label for="speed-select">速度選択:</label>
+            <select id="speed-select">
+                <option value="200">遅い</option>
+                <option value="100" selected>並み</option>
+                <option value="50">速い</option>
+            </select>
+            
+            <button id="start-btn">ゲームスタート</button>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+        <div id="instructions">
+            <h3>【遊び方】</h3>
+            <ul>
+                <li>矢印キー（↑ ↓ ← →）で蛇を操作します。</li>
+                <li>赤い餌を食べると蛇が長くなり、スコアが加算されます。</li>
+                <li>壁や自分の体にぶつかるとミス（NG）です。</li>
+                <li>10回ミスするとゲームオーバーです。</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
